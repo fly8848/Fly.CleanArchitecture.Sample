@@ -11,7 +11,15 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
         <ProjectReference Include="..\Fly.CleanArchitecture.Sample.Application\Fly.CleanArchitecture.Sample.Application.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Persistence\Repositories\"/>
     </ItemGroup>
 
 </Project>

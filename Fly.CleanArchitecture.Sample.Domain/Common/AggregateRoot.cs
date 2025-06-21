@@ -1,6 +1,8 @@
+using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
+
 namespace Fly.CleanArchitecture.Sample.Domain.Common;
 
-public abstract class AggregateRoot<TId> : AuditedEntity<TId>
+public abstract class AggregateRoot<TId> : AuditedEntity<TId>, IHasDomainEvent
 {
     private readonly List<DomainEvent> _domainEvents = new();
     public IReadOnlyList<DomainEvent> DomainEvents => _domainEvents;

@@ -2,41 +2,15 @@ using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
 
 namespace Fly.CleanArchitecture.Sample.Domain.Common;
 
-public abstract class AuditedEntity<TId> : Entity<TId>, IAuditedEntity
+public abstract class AuditedEntity<TId> : Entity<TId>, IHasCreatedAudited, IHasUpdatedAudited, IHasDeletedAudited,
+    IHasVersion
 {
-    public DateTime CreatedTime { get; private set; }
-    public string? CreatedBy { get; private set; }
-
-    void IAuditedEntity.Created(string? createdBy)
-    {
-        CreatedTime = DateTime.UtcNow;
-        CreatedBy = createdBy;
-    }
-
-    public DateTime? UpdatedTime { get; private set; }
-    public string? UpdatedBy { get; private set; }
-
-    void IAuditedEntity.Updated(string? updatedBy)
-    {
-        UpdatedTime = DateTime.UtcNow;
-        UpdatedBy = updatedBy;
-    }
-
-    public bool IsDeleted { get; private set; }
-    public DateTime? DeletedTime { get; private set; }
-    public string? DeletedBy { get; private set; }
-
-    void IAuditedEntity.Deleted(string? deletedBy)
-    {
-        DeletedTime = DateTime.UtcNow;
-        DeletedBy = deletedBy;
-        IsDeleted = true;
-    }
-
-    public int Version { get; private set; }
-
-    void IAuditedEntity.UpdateVersion()
-    {
-        Version++;
-    }
+    public DateTime CreatedTime { get; } = default;
+    public string? CreatedBy { get; } = null;
+    public bool IsDeleted { get; } = false;
+    public DateTime? DeletedTime { get; } = null;
+    public string? DeletedBy { get; } = null;
+    public DateTime? UpdatedTime { get; } = null;
+    public string? UpdatedBy { get; } = null;
+    public int Version { get; } = 0;
 }

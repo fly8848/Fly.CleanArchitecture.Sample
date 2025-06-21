@@ -14,4 +14,11 @@
         <PackageReference Include="MediatR.Contracts" Version="2.0.1"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <Folder Include="Orders\Dtos\"/>
+        <Folder Include="Orders\Enums\"/>
+        <Folder Include="Orders\Events\"/>
+        <Folder Include="Orders\ValueObjects\"/>
+    </ItemGroup>
+
 </Project>
