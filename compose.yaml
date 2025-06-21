@@ -1,0 +1,7 @@
+﻿services:
+  fly.cleanarchitecture.sample.api:
+    image: fly.cleanarchitecture.sample.api
+    build:
+      context: .
+      dockerfile: Fly.CleanArchitecture.Sample.Api/Dockerfile
+

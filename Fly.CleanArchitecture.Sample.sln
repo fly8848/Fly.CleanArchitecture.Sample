@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.CleanArchitecture.Sample.Api", "Fly.CleanArchitecture.Sample.Api\Fly.CleanArchitecture.Sample.Api.csproj", "{6443D361-F320-444A-9763-21CFE5B8C68B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A9F8AF59-A582-43CF-BEE9-D5CDB61503F4}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.CleanArchitecture.Sample.Application", "Fly.CleanArchitecture.Sample.Application\Fly.CleanArchitecture.Sample.Application.csproj", "{07BD943D-C808-4832-80A1-CE2AD0D877B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.CleanArchitecture.Sample.Domain", "Fly.CleanArchitecture.Sample.Domain\Fly.CleanArchitecture.Sample.Domain.csproj", "{A39100CA-8B11-4A10-97D9-8C572FD78ED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.CleanArchitecture.Sample.Infrastructure", "Fly.CleanArchitecture.Sample.Infrastructure\Fly.CleanArchitecture.Sample.Infrastructure.csproj", "{E1D7ED3F-37E7-4E39-B0B7-55ECEA9D1252}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6443D361-F320-444A-9763-21CFE5B8C68B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6443D361-F320-444A-9763-21CFE5B8C68B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6443D361-F320-444A-9763-21CFE5B8C68B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6443D361-F320-444A-9763-21CFE5B8C68B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BD943D-C808-4832-80A1-CE2AD0D877B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BD943D-C808-4832-80A1-CE2AD0D877B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BD943D-C808-4832-80A1-CE2AD0D877B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BD943D-C808-4832-80A1-CE2AD0D877B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A39100CA-8B11-4A10-97D9-8C572FD78ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A39100CA-8B11-4A10-97D9-8C572FD78ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A39100CA-8B11-4A10-97D9-8C572FD78ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A39100CA-8B11-4A10-97D9-8C572FD78ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D7ED3F-37E7-4E39-B0B7-55ECEA9D1252}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D7ED3F-37E7-4E39-B0B7-55ECEA9D1252}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D7ED3F-37E7-4E39-B0B7-55ECEA9D1252}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D7ED3F-37E7-4E39-B0B7-55ECEA9D1252}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
