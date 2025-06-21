@@ -11,7 +11,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Fly.CleanArchitecture.Sample.Domain\Fly.CleanArchitecture.Sample.Domain.csproj" />
+        <ProjectReference Include="..\Fly.CleanArchitecture.Sample.Domain\Fly.CleanArchitecture.Sample.Domain.csproj"/>
     </ItemGroup>
-    
+
 </Project>

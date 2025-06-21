@@ -4,17 +4,17 @@ public interface IAuditedEntity
 {
     DateTime CreatedTime { get; }
     string? CreatedBy { get; }
-    void Created(string? createdBy);
 
     DateTime? UpdatedTime { get; }
     string? UpdatedBy { get; }
-    void Updated(string? updatedBy);
 
     bool IsDeleted { get; }
     DateTime? DeletedTime { get; }
     string? DeletedBy { get; }
-    void Deleted(string? deletedBy);
 
-    int Version { get; } 
+    int Version { get; }
+    void Created(string? createdBy);
+    void Updated(string? updatedBy);
+    void Deleted(string? deletedBy);
     void UpdateVersion();
 }

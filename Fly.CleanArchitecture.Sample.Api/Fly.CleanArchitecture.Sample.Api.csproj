@@ -12,18 +12,18 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
+        <Content Include="..\.dockerignore">
+            <Link>.dockerignore</Link>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
+        <Folder Include="Controllers\"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Fly.CleanArchitecture.Sample.Application\Fly.CleanArchitecture.Sample.Application.csproj" />
-      <ProjectReference Include="..\Fly.CleanArchitecture.Sample.Infrastructure\Fly.CleanArchitecture.Sample.Infrastructure.csproj" />
+        <ProjectReference Include="..\Fly.CleanArchitecture.Sample.Application\Fly.CleanArchitecture.Sample.Application.csproj"/>
+        <ProjectReference Include="..\Fly.CleanArchitecture.Sample.Infrastructure\Fly.CleanArchitecture.Sample.Infrastructure.csproj"/>
     </ItemGroup>
 
 </Project>
