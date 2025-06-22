@@ -3,18 +3,22 @@ using Fly.CleanArchitecture.Sample.Domain.Common;
 using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence;
 
 public class ApplicationDbContext : DbContext
 {
     private readonly IMediator _mediator;
+    private readonly ILogger<ApplicationDbContext> _logger;
 
     public ApplicationDbContext(
         DbContextOptions options,
-        IMediator mediator) : base(options)
+        IMediator mediator,
+        ILogger<ApplicationDbContext> logger) : base(options)
     {
         _mediator = mediator;
+        _logger = logger;
     }
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new())
@@ -83,7 +87,7 @@ public class ApplicationDbContext : DbContext
     {
         foreach (var domainEvent in domainEvents)
         {
-            Console.WriteLine($"domainEvent: {domainEvent.GetType().Name}");
+            _logger.LogInformation("domainEvent: {Name}", domainEvent.GetType().Name);
             await _mediator.Publish(domainEvent, cancellationToken);
         }
     }

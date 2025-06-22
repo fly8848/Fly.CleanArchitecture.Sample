@@ -7,6 +7,7 @@ namespace Fly.CleanArchitecture.Sample.Api.Controllers;
 
 [ApiController]
 [Route("/api/[controller]/[action]")]
+[Response]
 public class TestController : ControllerBase
 {
     private readonly IMediator _mediator;
@@ -17,7 +18,7 @@ public class TestController : ControllerBase
     }
 
     [UnitOfWork]
-    [Validator]
+    // [Validator]
     [HttpPost]
     public async Task CreateOrderAsync(CreateOrderCommand command)
     {
