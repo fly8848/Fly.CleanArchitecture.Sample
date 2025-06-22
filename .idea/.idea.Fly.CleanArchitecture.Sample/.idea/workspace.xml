@@ -10,52 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07cdb19c-0c11-41aa-b24b-a9e6689866b4" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/Controllers/TestController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/BaseInfos/EventHandlers/AddCustomerAmountEventHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Common/Interfaces/IUnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Commands/CreateOrderCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Commands/CreateOrderCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Dtos/CreateOrderDetailInputDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/GenerateOrderNoEventHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/PushASystemEventHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/PushBSystemEventHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/IOrderRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/OrderProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Specs/OrderByCustomerOrderNo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Validators/CreateOrderCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Common/DomainException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Dtos/OrderDetailInputDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Entities/Order.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Entities/OrderDetail.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Enums/Currency.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Events/AddCustomerAmountEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Events/GenerateOrderNoEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Events/PushSystemEvent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/ValueObjects/Money.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Migrations/20250622101506_Init.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Migrations/20250622101506_Init.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/Configurations/OrderEntityTypeConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/Repositories/OrderRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/UnitOfWork.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fly.CleanArchitecture.Sample/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fly.CleanArchitecture.Sample/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/Controllers/TestController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/Controllers/TestController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/Fly.CleanArchitecture.Sample.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/Fly.CleanArchitecture.Sample.Api.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Api/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/BaseInfos/EventHandlers/AddCustomerAmountEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/BaseInfos/EventHandlers/AddCustomerAmountEventHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/DependencyInjection.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Fly.CleanArchitecture.Sample.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Fly.CleanArchitecture.Sample.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Common/Entity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Common/Entity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Commands/CreateOrderCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Commands/CreateOrderCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Commands/CreateOrderCommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Commands/CreateOrderCommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/GenerateOrderNoEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/GenerateOrderNoEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/PushASystemEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/PushASystemEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/PushBSystemEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/PushBSystemEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/IOrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/IOrderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/OrderProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/OrderProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Specs/OrderByCustomerOrderNo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/Specs/OrderByCustomerOrderNo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Fly.CleanArchitecture.Sample.Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Fly.CleanArchitecture.Sample.Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Entities/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Entities/OrderDetail.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Entities/OrderDetail.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Enums/Currency.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Enums/Currency.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Events/AddCustomerAmountEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Events/AddCustomerAmountEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Events/GenerateOrderNoEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/Events/GenerateOrderNoEvent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/ValueObjects/Money.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Domain/Orders/ValueObjects/Money.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Fly.CleanArchitecture.Sample.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Fly.CleanArchitecture.Sample.Infrastructure.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/Configurations/OrderEntityTypeConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/Configurations/OrderEntityTypeConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/Repositories/OrderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/Repositories/OrderRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/UnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Infrastructure/Persistence/UnitOfWork.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +168,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750487633511</updated>
-      <workItem from="1750487634213" duration="26414000" />
+      <workItem from="1750487634213" duration="26753000" />
     </task>
     <servers />
   </component>
@@ -216,43 +195,30 @@
           <option name="timeStamp" value="3" />
         </breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/PushASystemEventHandler.cs</url>
-          <line>17</line>
-          <properties documentPath="D:\Codes\Fly.CleanArchitecture.Sample\Fly.CleanArchitecture.Sample.Application\Orders\EventHandlers\PushASystemEventHandler.cs" containingFunctionPresentation="方法 'Handle'">
-            <startOffsets>
-              <option value="575" />
-            </startOffsets>
-            <endOffsets>
-              <option value="664" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/PushBSystemEventHandler.cs</url>
           <line>17</line>
           <properties documentPath="D:\Codes\Fly.CleanArchitecture.Sample\Fly.CleanArchitecture.Sample.Application\Orders\EventHandlers\PushBSystemEventHandler.cs" containingFunctionPresentation="方法 'Handle'">
             <startOffsets>
-              <option value="575" />
+              <option value="572" />
             </startOffsets>
             <endOffsets>
-              <option value="664" />
+              <option value="661" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/Orders/EventHandlers/GenerateOrderNoEventHandler.cs</url>
-          <line>19</line>
-          <properties documentPath="D:\Codes\Fly.CleanArchitecture.Sample\Fly.CleanArchitecture.Sample.Application\Orders\EventHandlers\GenerateOrderNoEventHandler.cs" containingFunctionPresentation="方法 'Handle'">
+          <url>file://$PROJECT_DIR$/Fly.CleanArchitecture.Sample.Application/BaseInfos/EventHandlers/AddCustomerAmountEventHandler.cs</url>
+          <line>10</line>
+          <properties documentPath="D:\Codes\Fly.CleanArchitecture.Sample\Fly.CleanArchitecture.Sample.Application\BaseInfos\EventHandlers\AddCustomerAmountEventHandler.cs" containingFunctionPresentation="方法 'Handle'">
             <startOffsets>
-              <option value="710" />
+              <option value="379" />
             </startOffsets>
             <endOffsets>
-              <option value="799" />
+              <option value="405" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

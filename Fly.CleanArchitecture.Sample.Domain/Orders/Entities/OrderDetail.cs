@@ -19,10 +19,7 @@ public class OrderDetail : Entity<Guid>
         Qty = qty;
         Money = money;
 
-        if (qty < 0)
-        {
-            throw new DomainException("件数不能为负数");
-        }
+        if (qty < 0) throw new DomainException("件数不能为负数");
     }
 
     public string Name { get; private set; } = null!;

@@ -4,7 +4,7 @@ using Fly.CleanArchitecture.Sample.Domain.Orders.Dtos;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders;
 
-public class OrderProfile: Profile
+public class OrderProfile : Profile
 {
     public OrderProfile()
     {

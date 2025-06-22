@@ -12,7 +12,6 @@ services.AddInfrastructure(configuration);
 services.AddApplication();
 services.AddDomain();
 
-
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

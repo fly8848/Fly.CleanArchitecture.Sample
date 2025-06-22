@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Fly.CleanArchitecture.Sample.Application.BaseInfos.EventHandlers;
 
-public class AddCustomerAmountEventHandler: INotificationHandler<AddCustomerAmountEvent>
+public class AddCustomerAmountEventHandler : INotificationHandler<AddCustomerAmountEvent>
 {
     public Task Handle(AddCustomerAmountEvent notification, CancellationToken cancellationToken)
     {

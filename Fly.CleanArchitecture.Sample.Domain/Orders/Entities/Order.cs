@@ -7,6 +7,8 @@ namespace Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
 
 public class Order : AggregateRoot<Guid>
 {
+    private readonly List<OrderDetail> _orderDetails = new();
+
     public Order(string customerName, string customerOrderNo)
     {
         Id = Guid.NewGuid();
@@ -18,8 +20,6 @@ public class Order : AggregateRoot<Guid>
     public string CustomerName { get; private set; }
     public string CustomerOrderNo { get; private set; }
     public string? OrderNo { get; private set; }
-    
-    private readonly List<OrderDetail> _orderDetails = new List<OrderDetail>();
     public IReadOnlyList<OrderDetail> OrderDetails => _orderDetails.AsReadOnly();
 
     public void SetOrderNo(string orderNo)
@@ -36,7 +36,7 @@ public class Order : AggregateRoot<Guid>
             var orderDetail = new OrderDetail(item.Name, item.Qty, money);
             _orderDetails.Add(orderDetail);
         }
-        
+
         var amount = orderDetails.Sum(x => x.Amount);
         AddDomainEvent(new AddCustomerAmountEvent(Id, amount));
     }

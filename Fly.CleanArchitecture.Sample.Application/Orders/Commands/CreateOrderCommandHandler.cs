@@ -10,9 +10,9 @@ namespace Fly.CleanArchitecture.Sample.Application.Orders.Commands;
 public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Unit>
 {
     private readonly IMapper _mapper;
-    private readonly IValidator<CreateOrderCommand> _validator;
-    private readonly IUnitOfWork _unitOfWork;
     private readonly IOrderRepository _orderRepository;
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly IValidator<CreateOrderCommand> _validator;
 
     public CreateOrderCommandHandler(
         IMapper mapper,
@@ -25,7 +25,7 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Uni
         _unitOfWork = unitOfWork;
         _orderRepository = orderRepository;
     }
-    
+
     public async Task<Unit> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
         var result = await _validator.ValidateAsync(request, cancellationToken);
@@ -34,13 +34,13 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Uni
             var errors = string.Join(";", result.Errors.Select(x => x.ErrorMessage));
             throw new ArgumentException(errors);
         }
-        
+
         var detailDtos = _mapper.Map<List<OrderDetailInputDto>>(request.Items);
         var order = new Order(request.CustomerName!, request.CustomerOrderNo!);
         order.AddDetails(detailDtos);
-        
+
         await _orderRepository.AddAsync(order, cancellationToken);
-        
+
         return Unit.Value;
     }
 }

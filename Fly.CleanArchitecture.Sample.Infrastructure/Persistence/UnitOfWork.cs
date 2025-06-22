@@ -5,9 +5,8 @@ namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence;
 
 public class UnitOfWork : IUnitOfWork
 {
-    private IDbContextTransaction? _transaction;
-
     private readonly ApplicationDbContext _context;
+    private IDbContextTransaction? _transaction;
 
     public UnitOfWork(ApplicationDbContext context)
     {
@@ -16,30 +15,21 @@ public class UnitOfWork : IUnitOfWork
 
     public async Task BeginTransactionAsync()
     {
-        if (_transaction != null)
-        {
-            throw new ArgumentNullException(nameof(_transaction));
-        }
+        if (_transaction != null) throw new ArgumentNullException(nameof(_transaction));
 
         _transaction = await _context.Database.BeginTransactionAsync();
     }
 
     public async Task CommitAsync()
     {
-        if (_transaction == null)
-        {
-            throw new ArgumentNullException(nameof(_transaction));
-        }
+        if (_transaction == null) throw new ArgumentNullException(nameof(_transaction));
 
         await _transaction.CommitAsync();
     }
 
     public async Task RollbackAsync()
     {
-        if (_transaction == null)
-        {
-            throw new ArgumentNullException(nameof(_transaction));
-        }
+        if (_transaction == null) throw new ArgumentNullException(nameof(_transaction));
 
         await _transaction.RollbackAsync();
     }

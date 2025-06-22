@@ -12,7 +12,7 @@ public static class DependencyInjection
     {
         services.AddAutoMapper(Assembly.GetExecutingAssembly());
         services.AddMediatR(x => x.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-        
+
         services.AddScoped<IValidator<CreateOrderCommand>, CreateOrderCommandValidator>();
     }
 }

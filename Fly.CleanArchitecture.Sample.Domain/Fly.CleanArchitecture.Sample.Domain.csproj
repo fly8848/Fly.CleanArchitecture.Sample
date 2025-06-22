@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="BaseInfo\" />
+        <Folder Include="BaseInfo\"/>
     </ItemGroup>
 
 </Project>

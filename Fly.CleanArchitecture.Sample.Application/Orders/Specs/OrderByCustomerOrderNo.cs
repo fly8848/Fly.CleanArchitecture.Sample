@@ -3,7 +3,7 @@ using Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders.Specs;
 
-public class OrderByCustomerOrderNo: Specification<Order>
+public class OrderByCustomerOrderNo : Specification<Order>
 {
     public OrderByCustomerOrderNo(string customerOrderNo)
     {
