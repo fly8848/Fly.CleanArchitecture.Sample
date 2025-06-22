@@ -9,8 +9,8 @@ namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence;
 
 public class ApplicationDbContext : DbContext
 {
-    private readonly IMediator _mediator;
     private readonly ILogger<ApplicationDbContext> _logger;
+    private readonly IMediator _mediator;
 
     public ApplicationDbContext(
         DbContextOptions options,

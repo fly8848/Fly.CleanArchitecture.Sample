@@ -1,11 +1,10 @@
 using System.Net;
-using Fly.CleanArchitecture.Sample.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Fly.CleanArchitecture.Sample.Api.Filters;
 
-public class ExceptionFilter: IAsyncExceptionFilter
+public class ExceptionFilter : IAsyncExceptionFilter
 {
     private readonly ILogger<ExceptionFilter> _logger;
 
@@ -16,15 +15,12 @@ public class ExceptionFilter: IAsyncExceptionFilter
 
     public Task OnExceptionAsync(ExceptionContext context)
     {
-        if (context.ExceptionHandled)
-        {
-            return Task.CompletedTask;
-        }
+        if (context.ExceptionHandled) return Task.CompletedTask;
 
         _logger.LogError(context.Exception, "An unhandled exception has occurred.");
 
         // TODO: 区分异常类型 区分环境返回错误信息
-        context.Result  = new ObjectResult(context.Exception.Message)
+        context.Result = new ObjectResult(context.Exception.Message)
         {
             StatusCode = (int)HttpStatusCode.InternalServerError
         };

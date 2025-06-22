@@ -9,12 +9,12 @@ public static class DependencyInjection
         services.AddControllers(x =>
         {
             x.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
-            
+
             x.Filters.Add<ExceptionFilter>();
-            
+
             x.Filters.Add<ValidatorFilter>();
             x.Filters.Add<UnitOfWorkFilter>();
-            
+
             x.Filters.Add<ResponseFilter>();
         });
 

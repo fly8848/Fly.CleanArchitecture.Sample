@@ -40,22 +40,13 @@ public class UnitOfWorkFilter : IAsyncActionFilter
 
     private bool IsEnabled(ActionExecutingContext context)
     {
-        if (context.ActionDescriptor is not ControllerActionDescriptor descriptor)
-        {
-            return false;
-        }
+        if (context.ActionDescriptor is not ControllerActionDescriptor descriptor) return false;
 
         var methodAttribute = descriptor.MethodInfo.GetCustomAttribute<UnitOfWorkAttribute>();
-        if (methodAttribute != null)
-        {
-            return methodAttribute.IsEnabled;
-        }
+        if (methodAttribute != null) return methodAttribute.IsEnabled;
 
         var controllerAttribute = descriptor.ControllerTypeInfo.GetCustomAttribute<UnitOfWorkAttribute>();
-        if (controllerAttribute != null)
-        {
-            return controllerAttribute.IsEnabled;
-        }
+        if (controllerAttribute != null) return controllerAttribute.IsEnabled;
 
         return false;
     }

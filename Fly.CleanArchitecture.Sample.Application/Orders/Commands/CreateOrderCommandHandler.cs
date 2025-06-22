@@ -1,6 +1,4 @@
 using AutoMapper;
-using FluentValidation;
-using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Dtos;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
 using MediatR;

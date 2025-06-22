@@ -59,22 +59,13 @@ public class ResponseFilter : IAsyncResultFilter
 
     private bool IsEnabled(ResultExecutingContext context)
     {
-        if (context.ActionDescriptor is not ControllerActionDescriptor descriptor)
-        {
-            return false;
-        }
+        if (context.ActionDescriptor is not ControllerActionDescriptor descriptor) return false;
 
         var methodAttribute = descriptor.MethodInfo.GetCustomAttribute<ResponseAttribute>();
-        if (methodAttribute != null)
-        {
-            return methodAttribute.IsEnabled;
-        }
+        if (methodAttribute != null) return methodAttribute.IsEnabled;
 
         var controllerAttribute = descriptor.ControllerTypeInfo.GetCustomAttribute<ResponseAttribute>();
-        if (controllerAttribute != null)
-        {
-            return controllerAttribute.IsEnabled;
-        }
+        if (controllerAttribute != null) return controllerAttribute.IsEnabled;
 
         return false;
     }
