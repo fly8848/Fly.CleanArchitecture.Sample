@@ -1,7 +1,25 @@
 ﻿services:
-  fly.cleanarchitecture.sample.api:
-    image: fly.cleanarchitecture.sample.api
-    build:
-      context: .
-      dockerfile: Fly.CleanArchitecture.Sample.Api/Dockerfile
+  redis:
+    image: redis:alpine
+    container_name: ${CONTAINER_PREFIX}redis
+    ports:
+      - "6379:6379"
+    command: redis-server --save 20 1 --loglevel warning --requirepass your_password
+    volumes:
+      - ${DATA_PATH}/redis:/data
+      - ${CONFIG_PATH}/redis:/usr/local/etc/redis
+    environment:
+      - TZ=${TZ}
 
+  mysql:
+    image: mysql:8.0
+    container_name: ${CONTAINER_PREFIX}mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ${DATA_PATH}/mysql:/var/lib/mysql
+      - ${CONFIG_PATH}/mysql/conf.d:/etc/mysql/conf.d
+      - ${CONFIG_PATH}/mysql/init:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=1q2w3E*
+      - TZ=${TZ}

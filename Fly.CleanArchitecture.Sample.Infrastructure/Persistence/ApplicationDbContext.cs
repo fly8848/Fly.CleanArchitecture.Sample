@@ -21,7 +21,7 @@ public class ApplicationDbContext : DbContext
     {
         UpdateAuditedEntities();
 
-        var domainEvents = ExtractAndClearDomainEvents();
+        var domainEvents = GetAndClearDomainEvents();
 
         var result = await base.SaveChangesAsync(cancellationToken);
 
@@ -64,7 +64,7 @@ public class ApplicationDbContext : DbContext
         }
     }
 
-    private List<DomainEvent> ExtractAndClearDomainEvents()
+    private List<DomainEvent> GetAndClearDomainEvents()
     {
         var domainEntities = ChangeTracker.Entries<IHasDomainEvent>()
             .Select(x => x.Entity)

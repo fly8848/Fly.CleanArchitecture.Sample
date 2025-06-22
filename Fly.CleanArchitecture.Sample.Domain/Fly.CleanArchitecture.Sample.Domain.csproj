@@ -15,10 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Orders\Dtos\"/>
-        <Folder Include="Orders\Enums\"/>
-        <Folder Include="Orders\Events\"/>
-        <Folder Include="Orders\ValueObjects\"/>
+      <Folder Include="BaseInfo\" />
     </ItemGroup>
 
 </Project>

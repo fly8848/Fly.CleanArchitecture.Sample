@@ -5,9 +5,10 @@ using Fly.CleanArchitecture.Sample.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 var services = builder.Services;
+var configuration = builder.Configuration;
 
 services.AddApi();
-services.AddInfrastructure();
+services.AddInfrastructure(configuration);
 services.AddApplication();
 services.AddDomain();
 
@@ -19,10 +20,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
 
 app.MapControllers();
 
