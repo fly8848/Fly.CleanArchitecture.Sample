@@ -13,30 +13,30 @@ public class UnitOfWork : IUnitOfWork
         _context = context;
     }
 
-    public async Task BeginTransactionAsync()
+    public async Task BeginTransactionAsync(CancellationToken cancellationToken)
     {
         if (_transaction != null) throw new ArgumentNullException(nameof(_transaction));
 
-        _transaction = await _context.Database.BeginTransactionAsync();
+        _transaction = await _context.Database.BeginTransactionAsync(cancellationToken);
     }
 
-    public async Task CommitAsync()
+    public async Task CommitAsync(CancellationToken cancellationToken)
     {
         if (_transaction == null) throw new ArgumentNullException(nameof(_transaction));
 
-        await _transaction.CommitAsync();
+        await _transaction.CommitAsync(cancellationToken);
     }
 
-    public async Task RollbackAsync()
+    public async Task RollbackAsync(CancellationToken cancellationToken)
     {
         if (_transaction == null) throw new ArgumentNullException(nameof(_transaction));
 
-        await _transaction.RollbackAsync();
+        await _transaction.RollbackAsync(cancellationToken);
     }
 
-    public Task<int> SaveChangesAsync()
+    public Task<int> SaveChangesAsync(CancellationToken cancellationToken)
     {
-        return _context.SaveChangesAsync();
+        return _context.SaveChangesAsync(cancellationToken);
     }
 
     public void Dispose()

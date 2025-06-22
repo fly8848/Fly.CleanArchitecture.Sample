@@ -1,3 +1,4 @@
+using Fly.CleanArchitecture.Sample.Api.Attributes;
 using Fly.CleanArchitecture.Sample.Application.Orders.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,8 @@ public class TestController : ControllerBase
         _mediator = mediator;
     }
 
+    [UnitOfWork]
+    [Validator]
     [HttpPost]
     public async Task CreateOrderAsync(CreateOrderCommand command)
     {

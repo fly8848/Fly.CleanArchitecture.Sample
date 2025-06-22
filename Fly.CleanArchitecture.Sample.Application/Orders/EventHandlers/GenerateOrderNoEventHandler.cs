@@ -25,6 +25,6 @@ public class GenerateOrderNoEventHandler : INotificationHandler<GenerateOrderNoE
         var orderNo = DateTime.Now.ToString("yyyyMMdd") + Guid.NewGuid().ToString("N");
 
         order.SetOrderNo(orderNo);
-        await _unitOfWork.SaveChangesAsync();
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
     }
 }

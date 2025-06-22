@@ -34,7 +34,8 @@ public class ApplicationDbContext : DbContext
     {
         // TODO: JWT
         var username = string.Empty;
-        foreach (var entry in ChangeTracker.Entries())
+        var entries = ChangeTracker.Entries();
+        foreach (var entry in entries)
         {
             if (entry.State == EntityState.Added && entry.Entity is IHasCreatedAudited)
             {
@@ -80,7 +81,11 @@ public class ApplicationDbContext : DbContext
 
     private async Task DispatchDomainEvents(List<DomainEvent> domainEvents, CancellationToken cancellationToken)
     {
-        foreach (var domainEvent in domainEvents) await _mediator.Publish(domainEvent, cancellationToken);
+        foreach (var domainEvent in domainEvents)
+        {
+            Console.WriteLine($"domainEvent: {domainEvent.GetType().Name}");
+            await _mediator.Publish(domainEvent, cancellationToken);
+        }
     }
 
     protected override void OnModelCreating(ModelBuilder builder)

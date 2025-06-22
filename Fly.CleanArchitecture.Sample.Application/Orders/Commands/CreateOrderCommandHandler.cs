@@ -11,30 +11,17 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Uni
 {
     private readonly IMapper _mapper;
     private readonly IOrderRepository _orderRepository;
-    private readonly IUnitOfWork _unitOfWork;
-    private readonly IValidator<CreateOrderCommand> _validator;
 
     public CreateOrderCommandHandler(
         IMapper mapper,
-        IValidator<CreateOrderCommand> validator,
-        IUnitOfWork unitOfWork,
         IOrderRepository orderRepository)
     {
         _mapper = mapper;
-        _validator = validator;
-        _unitOfWork = unitOfWork;
         _orderRepository = orderRepository;
     }
 
     public async Task<Unit> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
-        var result = await _validator.ValidateAsync(request, cancellationToken);
-        if (!result.IsValid)
-        {
-            var errors = string.Join(";", result.Errors.Select(x => x.ErrorMessage));
-            throw new ArgumentException(errors);
-        }
-
         var detailDtos = _mapper.Map<List<OrderDetailInputDto>>(request.Items);
         var order = new Order(request.CustomerName!, request.CustomerOrderNo!);
         order.AddDetails(detailDtos);

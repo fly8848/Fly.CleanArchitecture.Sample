@@ -22,13 +22,13 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
         RuleForEach(x => x.Items).ChildRules(item =>
         {
             item.RuleFor(x => x.Name)
-                .NotEmpty().WithMessage("第{CollectionIndex}行名称必填");
+                .NotEmpty().WithMessage("名称必填");
             item.RuleFor(x => x.Amount)
-                .GreaterThanOrEqualTo(0).WithMessage("第{CollectionIndex}行金额不能为负数");
+                .GreaterThanOrEqualTo(0).WithMessage("金额不能为负数");
             item.RuleFor(x => x.Qty)
-                .GreaterThanOrEqualTo(0).WithMessage("第{CollectionIndex}行件数不能为负数");
+                .GreaterThanOrEqualTo(0).WithMessage("件数不能为负数");
             item.RuleFor(x => x.Currency)
-                .Must(x => Enum.IsDefined(typeof(Currency), x)).WithMessage("第{CollectionIndex}行币别有误");
+                .Must(x => Enum.IsDefined(typeof(Currency), x)).WithMessage("币别有误");
         });
     }
 
