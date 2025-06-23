@@ -2,7 +2,6 @@ using System.Reflection;
 using Fly.CleanArchitecture.Sample.Domain.Common;
 using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence;

@@ -1,5 +1,4 @@
 using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Common;
 

@@ -1,4 +1,3 @@
-using FluentValidation;
 using Fly.CleanArchitecture.Sample.Application.Orders.Commands;
 using Fly.CleanArchitecture.Sample.Application.Orders.Specs;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;

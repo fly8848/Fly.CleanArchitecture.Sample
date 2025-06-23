@@ -1,4 +1,3 @@
-using Fly.CleanArchitecture.Sample.Domain.Common;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Events;
 
 namespace Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;

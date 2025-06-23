@@ -1,11 +1,6 @@
-using System.Reflection;
 using System.Text;
 using FluentValidation;
 using FluentValidation.Results;
-using Fly.CleanArchitecture.Sample.Api.Attributes;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Controllers;
-using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Fly.CleanArchitecture.Sample.Api.Filters;
 

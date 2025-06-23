@@ -1,5 +1,3 @@
-using Fly.CleanArchitecture.Sample.Domain.Common;
-
 namespace Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
 
 public class OrderDetail : Entity<Guid>

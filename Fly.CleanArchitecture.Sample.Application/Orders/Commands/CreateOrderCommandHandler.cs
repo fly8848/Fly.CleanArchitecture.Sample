@@ -1,6 +1,4 @@
-using AutoMapper;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
-using MediatR;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders.Commands;
 
@@ -19,7 +17,7 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Uni
 
     public async Task<Unit> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
-        var order = new Order(request.CustomerName!, request.CustomerOrderNo!);
+        var order = new Order(request.CustomerName, request.CustomerOrderNo);
         foreach (var item in request.Items) order.AddDetail(item.Amount, (Currency)item.Currency, item.Name, item.Qty);
 
         await _orderRepository.AddAsync(order, cancellationToken);

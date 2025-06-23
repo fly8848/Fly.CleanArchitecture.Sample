@@ -1,7 +1,5 @@
-using Fly.CleanArchitecture.Sample.Api.Attributes;
 using Fly.CleanArchitecture.Sample.Application.Orders.Commands;
 using MediatR;
-using Microsoft.AspNetCore.Mvc;
 
 namespace Fly.CleanArchitecture.Sample.Api.Controllers;
 

@@ -1,4 +1,3 @@
-using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence;

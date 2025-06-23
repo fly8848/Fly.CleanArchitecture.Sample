@@ -1,6 +1,4 @@
-using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Events;
-using MediatR;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders.EventHandlers;
 
@@ -22,7 +20,7 @@ public class GenerateOrderNoEventHandler : INotificationHandler<GenerateOrderNoE
         if (order == null || order.OrderNo != null) return;
 
         // mock流水号
-        var orderNo = DateTime.Now.ToString("yyyyMMdd") + Guid.NewGuid().ToString("N");
+        var orderNo = DateTime.UtcNow.ToString("yyyyMMdd") + Guid.NewGuid().ToString("N");
 
         order.SetOrderNo(orderNo);
         await _unitOfWork.SaveChangesAsync(cancellationToken);

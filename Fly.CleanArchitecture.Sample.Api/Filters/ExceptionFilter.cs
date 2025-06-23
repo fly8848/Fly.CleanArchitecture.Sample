@@ -1,7 +1,3 @@
-using System.Net;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Filters;
-
 namespace Fly.CleanArchitecture.Sample.Api.Filters;
 
 public class ExceptionFilter : IAsyncExceptionFilter

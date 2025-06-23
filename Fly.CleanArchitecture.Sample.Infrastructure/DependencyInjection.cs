@@ -1,8 +1,6 @@
-﻿using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
-using Fly.CleanArchitecture.Sample.Application.Orders;
+﻿using Fly.CleanArchitecture.Sample.Application.Orders;
 using Fly.CleanArchitecture.Sample.Infrastructure.Persistence;
 using Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Repositories;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

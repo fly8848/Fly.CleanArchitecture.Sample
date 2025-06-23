@@ -1,10 +1,4 @@
-using System.Net;
-using System.Reflection;
-using Fly.CleanArchitecture.Sample.Api.Attributes;
 using Fly.CleanArchitecture.Sample.Api.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Controllers;
-using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Fly.CleanArchitecture.Sample.Api.Filters;
 

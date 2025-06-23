@@ -1,5 +1,3 @@
-using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
-
 namespace Fly.CleanArchitecture.Sample.Domain.Common;
 
 public abstract class AuditedEntity<TId> : Entity<TId>, IHasCreatedAudited, IHasUpdatedAudited, IHasDeletedAudited,
