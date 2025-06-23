@@ -1,9 +1,7 @@
 using Fly.CleanArchitecture.Sample.Domain.Common;
-using Fly.CleanArchitecture.Sample.Domain.Orders.Dtos;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Events;
-using Fly.CleanArchitecture.Sample.Domain.Orders.ValueObjects;
 
-namespace Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
+namespace Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
 
 public class Order : AggregateRoot<Guid>
 {
@@ -28,16 +26,10 @@ public class Order : AggregateRoot<Guid>
         AddDomainEvent(new PushSystemEvent(Id));
     }
 
-    public void AddDetails(List<OrderDetailInputDto> orderDetails)
+    public void AddDetail(decimal amount, Currency currency, string name, int qty)
     {
-        foreach (var item in orderDetails)
-        {
-            var money = new Money(item.Amount, item.Currency);
-            var orderDetail = new OrderDetail(item.Name, item.Qty, money);
-            _orderDetails.Add(orderDetail);
-        }
-
-        var amount = orderDetails.Sum(x => x.Amount);
-        AddDomainEvent(new AddCustomerAmountEvent(Id, amount));
+        var money = new Money(amount, currency);
+        var orderDetail = new OrderDetail(name, qty, money);
+        _orderDetails.Add(orderDetail);
     }
 }

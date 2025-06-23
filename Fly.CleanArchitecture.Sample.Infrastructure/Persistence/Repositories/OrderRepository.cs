@@ -1,7 +1,7 @@
 using Ardalis.Specification;
 using Ardalis.Specification.EntityFrameworkCore;
 using Fly.CleanArchitecture.Sample.Application.Orders;
-using Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
+using Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Repositories;
 

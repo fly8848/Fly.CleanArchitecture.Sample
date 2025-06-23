@@ -1,7 +1,7 @@
 using FluentValidation;
 using Fly.CleanArchitecture.Sample.Application.Orders.Commands;
 using Fly.CleanArchitecture.Sample.Application.Orders.Specs;
-using Fly.CleanArchitecture.Sample.Domain.Orders.Enums;
+using Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders.Validators;
 

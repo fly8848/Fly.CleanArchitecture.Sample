@@ -1,7 +1,6 @@
 using Fly.CleanArchitecture.Sample.Domain.Common;
-using Fly.CleanArchitecture.Sample.Domain.Orders.ValueObjects;
 
-namespace Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
+namespace Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
 
 public class OrderDetail : Entity<Guid>
 {
@@ -9,7 +8,7 @@ public class OrderDetail : Entity<Guid>
     {
     }
 
-    internal OrderDetail(
+    public OrderDetail(
         string name,
         int qty,
         Money money)
