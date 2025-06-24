@@ -5,6 +5,10 @@ namespace Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
 
 public class OrderDetail : Entity
 {
+    private OrderDetail()
+    {
+    }
+
     public OrderDetail(
         int orderId,
         string name,

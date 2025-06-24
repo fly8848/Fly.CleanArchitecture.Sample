@@ -16,6 +16,7 @@ public class Order : Entity, IHasCreated, IHasUpdated, IHasDeleted
     public string CustomerName { get; private set; }
     public string CustomerOrderNo { get; private set; }
     public string? OrderNo { get; private set; }
+    public string? Remark { get; set; }
 
     public DateTime CreatedTime { get; } = default;
     public string? CreatedBy { get; } = null;
