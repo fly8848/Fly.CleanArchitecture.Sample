@@ -1,4 +1,5 @@
 using Fly.CleanArchitecture.Sample.Application.Orders.Dtos;
+using MediatR;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders.Commands;
 

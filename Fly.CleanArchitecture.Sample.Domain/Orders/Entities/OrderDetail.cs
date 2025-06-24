@@ -1,17 +1,17 @@
-namespace Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
+using Fly.CleanArchitecture.Sample.Domain.Common;
+using Fly.CleanArchitecture.Sample.Domain.Orders.ValueObjects;
 
-public class OrderDetail : Entity<Guid>
+namespace Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
+
+public class OrderDetail : Entity
 {
-    private OrderDetail()
-    {
-    }
-
     public OrderDetail(
+        int orderId,
         string name,
         int qty,
         Money money)
     {
-        Id = Guid.NewGuid();
+        OrderId = orderId;
         Name = name;
         Qty = qty;
         Money = money;
@@ -19,6 +19,7 @@ public class OrderDetail : Entity<Guid>
         if (qty < 0) throw new DomainException("件数不能为负数");
     }
 
+    public int OrderId { get; private set; }
     public string Name { get; private set; } = null!;
     public int Qty { get; private set; }
     public Money Money { get; private set; } = null!;

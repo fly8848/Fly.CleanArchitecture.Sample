@@ -1,4 +1,6 @@
+using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Events;
+using MediatR;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders.EventHandlers;
 
@@ -15,7 +17,7 @@ public class GenerateOrderNoEventHandler : INotificationHandler<GenerateOrderNoE
 
     public async Task Handle(GenerateOrderNoEvent notification, CancellationToken cancellationToken)
     {
-        var order = await _orderRepository.GetByIdAsync(notification.OrderId, cancellationToken);
+        var order = await _orderRepository.FindAsync(notification.OrderId, cancellationToken);
         // 该校验可做可不做
         if (order == null || order.OrderNo != null) return;
 

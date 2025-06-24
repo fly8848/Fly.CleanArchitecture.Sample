@@ -1,4 +1,7 @@
-namespace Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
+using Fly.CleanArchitecture.Sample.Domain.Common;
+using Fly.CleanArchitecture.Sample.Domain.Orders.Enums;
+
+namespace Fly.CleanArchitecture.Sample.Domain.Orders.ValueObjects;
 
 public record Money : ValueObject
 {

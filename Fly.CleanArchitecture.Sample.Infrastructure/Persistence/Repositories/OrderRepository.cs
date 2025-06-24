@@ -1,22 +1,19 @@
-using Ardalis.Specification;
-using Ardalis.Specification.EntityFrameworkCore;
 using Fly.CleanArchitecture.Sample.Application.Orders;
-using Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
+using Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
+using Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Common;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Repositories;
 
-public class OrderRepository : RepositoryBase<Order>, IOrderRepository
+public class OrderRepository : Repository<Order>, IOrderRepository
 {
-    private readonly ApplicationDbContext _dbContext;
-
     public OrderRepository(ApplicationDbContext dbContext) : base(dbContext)
     {
-        _dbContext = dbContext;
     }
+}
 
-    public OrderRepository(ApplicationDbContext dbContext, ISpecificationEvaluator specificationEvaluator) : base(
-        dbContext, specificationEvaluator)
+public class OrderDetailRepository: Repository<OrderDetail>, IOrderDetailRepository
+{
+    public OrderDetailRepository(ApplicationDbContext dbContext) : base(dbContext)
     {
-        _dbContext = dbContext;
     }
 }

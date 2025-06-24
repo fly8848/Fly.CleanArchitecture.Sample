@@ -2,6 +2,7 @@ using System.Reflection;
 using Fly.CleanArchitecture.Sample.Domain.Common;
 using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence;
@@ -40,37 +41,37 @@ public class ApplicationDbContext : DbContext
         var entries = ChangeTracker.Entries();
         foreach (var entry in entries)
         {
-            if (entry.State == EntityState.Added && entry.Entity is IHasCreatedAudited)
+            if (entry.State == EntityState.Added && entry.Entity is IHasCreated)
             {
-                entry.Property(nameof(IHasCreatedAudited.CreatedTime)).CurrentValue = DateTime.UtcNow;
-                entry.Property(nameof(IHasCreatedAudited.CreatedBy)).CurrentValue = username;
+                entry.Property(nameof(IHasCreated.CreatedTime)).CurrentValue = DateTime.UtcNow;
+                entry.Property(nameof(IHasCreated.CreatedBy)).CurrentValue = username;
             }
 
             if (entry.State == EntityState.Modified)
             {
-                if (entry.Entity is IHasUpdatedAudited)
+                if (entry.Entity is IHasUpdated)
                 {
-                    entry.Property(nameof(IHasUpdatedAudited.UpdatedTime)).CurrentValue = DateTime.UtcNow;
-                    entry.Property(nameof(IHasUpdatedAudited.UpdatedBy)).CurrentValue = username;
+                    entry.Property(nameof(IHasUpdated.UpdatedTime)).CurrentValue = DateTime.UtcNow;
+                    entry.Property(nameof(IHasUpdated.UpdatedBy)).CurrentValue = username;
                 }
 
                 if (entry.Entity is IHasVersion versionedEntity)
                     entry.Property(nameof(IHasVersion.Version)).CurrentValue = versionedEntity.Version + 1;
             }
 
-            if (entry.State == EntityState.Deleted && entry.Entity is IHasDeletedAudited)
+            if (entry.State == EntityState.Deleted && entry.Entity is IHasDeleted)
             {
                 entry.State = EntityState.Modified;
-                entry.Property(nameof(IHasDeletedAudited.DeletedTime)).CurrentValue = DateTime.UtcNow;
-                entry.Property(nameof(IHasDeletedAudited.DeletedBy)).CurrentValue = username;
-                entry.Property(nameof(IHasDeletedAudited.IsDeleted)).CurrentValue = true;
+                entry.Property(nameof(IHasDeleted.DeletedTime)).CurrentValue = DateTime.UtcNow;
+                entry.Property(nameof(IHasDeleted.DeletedBy)).CurrentValue = username;
+                entry.Property(nameof(IHasDeleted.IsDeleted)).CurrentValue = true;
             }
         }
     }
 
     private List<DomainEvent> GetAndClearDomainEvents()
     {
-        var domainEntities = ChangeTracker.Entries<IHasDomainEvent>()
+        var domainEntities = ChangeTracker.Entries<IEntity>()
             .Select(x => x.Entity)
             .Where(x => x.DomainEvents.Any())
             .ToList();

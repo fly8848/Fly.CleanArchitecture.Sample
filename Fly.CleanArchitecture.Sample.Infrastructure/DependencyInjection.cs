@@ -1,6 +1,8 @@
-﻿using Fly.CleanArchitecture.Sample.Application.Orders;
+﻿using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
+using Fly.CleanArchitecture.Sample.Application.Orders;
 using Fly.CleanArchitecture.Sample.Infrastructure.Persistence;
 using Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Repositories;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,7 +15,8 @@ public static class DependencyInjection
         services.AddDbContext<ApplicationDbContext>(options =>
         {
             var connectionString = configuration.GetConnectionString("MysqlConnection");
-            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+            options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
+                .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
         });
 
         services.AddScoped<IUnitOfWork, UnitOfWork>();

@@ -1,6 +1,6 @@
+using FluentValidation;
 using Fly.CleanArchitecture.Sample.Application.Orders.Commands;
-using Fly.CleanArchitecture.Sample.Application.Orders.Specs;
-using Fly.CleanArchitecture.Sample.Domain.Orders.Aggregates;
+using Fly.CleanArchitecture.Sample.Domain.Orders.Enums;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders.Validators;
 
@@ -33,6 +33,8 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 
     private async Task<bool> IsExistsOrder(string customerOrderNo, CancellationToken cancellationToken)
     {
-        return !await _orderRepository.AnyAsync(new OrderByCustomerOrderNo(customerOrderNo), cancellationToken);
+        var queryable = await _orderRepository.AsQueryableAsync();
+        queryable = queryable.Where(x => x.CustomerOrderNo == customerOrderNo);
+        return !await _orderRepository.AnyAsync(queryable, cancellationToken);
     }
 }
