@@ -1,5 +1,5 @@
-using Fly.CleanArchitecture.Sample.Domain.Common;
 using Fly.CleanArchitecture.Sample.Domain.Orders.ValueObjects;
+using Fly.Fast.Domain;
 
 namespace Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
 
@@ -20,7 +20,7 @@ public class OrderDetail : Entity<int>
         Qty = qty;
         Money = money;
 
-        if (qty < 0) throw new DomainException("件数不能为负数");
+        if (qty < 0) throw new OrderException("件数不能为负数");
     }
 
     public int OrderId { get; private set; }

@@ -1,6 +1,5 @@
 using System.Reflection;
-using Fly.CleanArchitecture.Sample.Domain.Common;
-using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
+using Fly.Fast.Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;

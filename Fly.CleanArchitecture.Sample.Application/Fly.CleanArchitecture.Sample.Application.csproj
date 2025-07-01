@@ -18,6 +18,7 @@
 
     <ItemGroup>
         <ProjectReference Include="..\Fly.CleanArchitecture.Sample.Domain\Fly.CleanArchitecture.Sample.Domain.csproj"/>
+        <ProjectReference Include="..\Fly.Fast\Fly.Fast.Application\Fly.Fast.Application.csproj"/>
     </ItemGroup>
 
 </Project>

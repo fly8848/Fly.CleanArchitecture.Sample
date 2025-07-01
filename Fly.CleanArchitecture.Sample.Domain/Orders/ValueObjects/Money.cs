@@ -1,5 +1,5 @@
-using Fly.CleanArchitecture.Sample.Domain.Common;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Enums;
+using Fly.Fast.Domain;
 
 namespace Fly.CleanArchitecture.Sample.Domain.Orders.ValueObjects;
 
@@ -7,7 +7,7 @@ public record Money : ValueObject
 {
     public Money(decimal amount, Currency currency)
     {
-        if (amount < 0) throw new DomainException("金额不能为负数");
+        if (amount < 0) throw new OrderException("金额不能为负数");
 
         Amount = amount;
         Currency = currency;

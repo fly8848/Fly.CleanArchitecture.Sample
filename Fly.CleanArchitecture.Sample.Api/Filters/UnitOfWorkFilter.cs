@@ -1,6 +1,6 @@
 using System.Reflection;
 using Fly.CleanArchitecture.Sample.Api.Attributes;
-using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
+using Fly.CleanArchitecture.Sample.Application;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Filters;
 

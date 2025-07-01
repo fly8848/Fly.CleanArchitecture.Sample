@@ -14,4 +14,8 @@
         <PackageReference Include="MediatR.Contracts" Version="2.0.1"/>
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\Fly.Fast\Fly.Fast.Domain\Fly.Fast.Domain.csproj"/>
+    </ItemGroup>
+
 </Project>

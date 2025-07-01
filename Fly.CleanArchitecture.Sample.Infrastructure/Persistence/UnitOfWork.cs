@@ -1,4 +1,4 @@
-using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
+using Fly.CleanArchitecture.Sample.Application;
 using Microsoft.EntityFrameworkCore.Storage;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence;

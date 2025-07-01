@@ -1,5 +1,3 @@
-using AutoMapper;
-using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Enums;
 using Fly.CleanArchitecture.Sample.Domain.Orders.ValueObjects;
@@ -9,8 +7,8 @@ namespace Fly.CleanArchitecture.Sample.Application.Orders.Commands;
 
 public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Unit>
 {
-    private readonly IOrderRepository _orderRepository;
     private readonly IOrderDetailRepository _orderDetailRepository;
+    private readonly IOrderRepository _orderRepository;
     private readonly IUnitOfWork _unitOfWork;
 
     public CreateOrderCommandHandler(

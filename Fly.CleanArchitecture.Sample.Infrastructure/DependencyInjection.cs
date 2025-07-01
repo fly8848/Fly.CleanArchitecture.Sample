@@ -1,4 +1,4 @@
-﻿using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
+﻿using Fly.CleanArchitecture.Sample.Application;
 using Fly.CleanArchitecture.Sample.Application.Orders;
 using Fly.CleanArchitecture.Sample.Infrastructure.Persistence;
 using Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Repositories;

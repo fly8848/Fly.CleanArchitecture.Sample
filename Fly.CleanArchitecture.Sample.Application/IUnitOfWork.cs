@@ -1,4 +1,4 @@
-namespace Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
+namespace Fly.CleanArchitecture.Sample.Application;
 
 public interface IUnitOfWork : IDisposable
 {

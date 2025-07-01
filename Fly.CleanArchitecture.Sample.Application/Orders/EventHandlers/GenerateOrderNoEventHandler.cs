@@ -1,4 +1,3 @@
-using Fly.CleanArchitecture.Sample.Application.Common.Interfaces;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Events;
 using MediatR;
 

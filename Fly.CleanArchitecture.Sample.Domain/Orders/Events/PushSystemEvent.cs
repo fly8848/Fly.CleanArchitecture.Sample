@@ -1,4 +1,4 @@
-using Fly.CleanArchitecture.Sample.Domain.Common;
+using Fly.Fast.Domain;
 
 namespace Fly.CleanArchitecture.Sample.Domain.Orders.Events;
 

@@ -1,5 +1,5 @@
 using Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
-using Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Common;
+using Fly.Fast.Infrastructure.EFCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
