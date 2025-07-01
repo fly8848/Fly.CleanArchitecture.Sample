@@ -1,8 +1,9 @@
 using Fly.CleanArchitecture.Sample.Domain.Common;
+using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
 
 namespace Fly.CleanArchitecture.Sample.Application.Common;
 
-public interface IRepository<T> where T : Entity
+public interface IRepository<T>  where T : class, IEntity
 {
     Task<T> AddAsync(T entity, CancellationToken cancellationToken = default);
     Task<List<T>> AddRangeAsync(List<T> entities, CancellationToken cancellationToken = default);

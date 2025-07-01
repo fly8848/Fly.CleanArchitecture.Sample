@@ -1,10 +1,10 @@
 using Fly.CleanArchitecture.Sample.Application.Common;
-using Fly.CleanArchitecture.Sample.Domain.Common;
+using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Common;
 
-public abstract class Repository<T> : IRepository<T> where T : Entity
+public abstract class Repository<T> : IRepository<T> where T : class, IEntity
 {
     private readonly DbContext _dbContext;
 

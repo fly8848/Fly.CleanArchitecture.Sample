@@ -12,7 +12,6 @@ public static class EntityTypeBuilderExtensions
         if (entityType.IsAssignableTo(typeof(IEntity)))
         {
             builder.Ignore(e => ((IEntity)e).DomainEvents);
-            builder.HasKey(e => ((IEntity)e).Id);
         }
 
         if (entityType.IsAssignableTo(typeof(IHasCreated)))

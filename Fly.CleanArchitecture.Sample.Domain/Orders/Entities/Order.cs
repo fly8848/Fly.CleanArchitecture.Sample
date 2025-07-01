@@ -4,7 +4,7 @@ using Fly.CleanArchitecture.Sample.Domain.Orders.Events;
 
 namespace Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
 
-public class Order : Entity, IHasCreated, IHasUpdated, IHasDeleted
+public class Order : Entity<int>, IHasCreated, IHasUpdated, IHasDeleted
 {
     public Order(string customerName, string customerOrderNo)
     {
@@ -18,17 +18,18 @@ public class Order : Entity, IHasCreated, IHasUpdated, IHasDeleted
     public string? OrderNo { get; private set; }
     public string? Remark { get; set; }
 
-    public DateTime CreatedTime { get; } = default;
-    public string? CreatedBy { get; } = null;
-    public bool IsDeleted { get; } = false;
-    public DateTime? DeletedTime { get; } = null;
-    public string? DeletedBy { get; } = null;
-    public DateTime? UpdatedTime { get; } = null;
-    public string? UpdatedBy { get; } = null;
 
     public void SetOrderNo(string orderNo)
     {
         OrderNo = orderNo;
         AddDomainEvent(new PushSystemEvent(Id));
     }
+
+    public DateTime CreatedTime { get; set; }
+    public string? CreatedBy { get; set; }
+    public DateTime? UpdatedTime { get; set; }
+    public string? UpdatedBy { get; set; }
+    public bool IsDeleted { get; set; }
+    public DateTime? DeletedTime { get; set; }
+    public string? DeletedBy { get; set; }
 }

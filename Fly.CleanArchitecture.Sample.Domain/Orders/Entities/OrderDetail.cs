@@ -3,7 +3,7 @@ using Fly.CleanArchitecture.Sample.Domain.Orders.ValueObjects;
 
 namespace Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
 
-public class OrderDetail : Entity
+public class OrderDetail : Entity<int>
 {
     private OrderDetail()
     {

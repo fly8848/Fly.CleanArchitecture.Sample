@@ -2,10 +2,11 @@ using Fly.CleanArchitecture.Sample.Domain.Common.Interfaces;
 
 namespace Fly.CleanArchitecture.Sample.Domain.Common;
 
-public abstract class Entity : IEntity
+public abstract class Entity<T> : IEntity<T>
 {
     private readonly List<DomainEvent> _domainEvents = new();
-    public int Id { get; } = 0;
+    
+    public T Id { get; init; } = default!;
     public IReadOnlyList<DomainEvent> DomainEvents => _domainEvents;
 
     public void AddDomainEvent(DomainEvent domainEvent)

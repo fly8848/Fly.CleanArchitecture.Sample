@@ -1,0 +1,3 @@
+[submodule "Fly.Fast"]
+	path = Fly.Fast
+	url = git@github.com:fly8848/Fly.Fast.git
