@@ -1,5 +1,5 @@
 using Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
-using Fly.Fast.Application.EFCore;
+using Fly.Fast.Persistence.Contracts;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders;
 

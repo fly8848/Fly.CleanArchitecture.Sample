@@ -1,6 +1,6 @@
 using Fly.CleanArchitecture.Sample.Application.Orders;
 using Fly.CleanArchitecture.Sample.Domain.Orders.Entities;
-using Fly.Fast.Infrastructure.EFCore;
+using Fly.Fast.Persistence.EntityFrameworkCore;
 
 namespace Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Repositories;
 

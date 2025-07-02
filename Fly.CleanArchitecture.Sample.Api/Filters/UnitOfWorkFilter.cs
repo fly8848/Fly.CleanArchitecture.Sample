@@ -1,6 +1,6 @@
 using System.Reflection;
 using Fly.CleanArchitecture.Sample.Api.Attributes;
-using Fly.CleanArchitecture.Sample.Application;
+using Fly.Fast.Persistence.Contracts;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.AspNetCore.Mvc.Filters;
 
@@ -29,8 +29,8 @@ public class UnitOfWorkFilter : IAsyncActionFilter
         var resultContext = await next();
         if (resultContext.Exception == null)
         {
-            await _unitOfWork.SaveChangesAsync(cancellationToken);
-            await _unitOfWork.CommitAsync(cancellationToken);
+            await _unitOfWork.SaveChangesAsync(cancellationToken: cancellationToken);
+            await _unitOfWork.CommitAsync(cancellationToken: cancellationToken);
         }
         else
         {

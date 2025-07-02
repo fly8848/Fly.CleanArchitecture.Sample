@@ -1,4 +1,5 @@
 using Fly.CleanArchitecture.Sample.Domain.Orders.Events;
+using Fly.Fast.Persistence.Contracts;
 using MediatR;
 
 namespace Fly.CleanArchitecture.Sample.Application.Orders.EventHandlers;
@@ -24,6 +25,6 @@ public class GenerateOrderNoEventHandler : INotificationHandler<GenerateOrderNoE
         var orderNo = DateTime.UtcNow.ToString("yyyyMMdd") + Guid.NewGuid().ToString("N");
 
         order.SetOrderNo(orderNo);
-        await _unitOfWork.SaveChangesAsync(cancellationToken);
+        await _unitOfWork.SaveChangesAsync(cancellationToken: cancellationToken);
     }
 }

@@ -9,23 +9,20 @@ public class CreateOrderCommandHandler : IRequestHandler<CreateOrderCommand, Uni
 {
     private readonly IOrderDetailRepository _orderDetailRepository;
     private readonly IOrderRepository _orderRepository;
-    private readonly IUnitOfWork _unitOfWork;
 
     public CreateOrderCommandHandler(
         IOrderRepository orderRepository,
-        IOrderDetailRepository orderDetailRepository,
-        IUnitOfWork unitOfWork)
+        IOrderDetailRepository orderDetailRepository
+    )
     {
         _orderRepository = orderRepository;
         _orderDetailRepository = orderDetailRepository;
-        _unitOfWork = unitOfWork;
     }
 
     public async Task<Unit> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
         var order = new Order(request.CustomerName, request.CustomerOrderNo);
         await _orderRepository.AddAsync(order, cancellationToken);
-        await _unitOfWork.SaveChangesAsync(cancellationToken);
 
         var orderDetails = new List<OrderDetail>();
         foreach (var item in request.Items)

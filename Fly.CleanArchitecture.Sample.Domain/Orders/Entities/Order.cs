@@ -9,7 +9,7 @@ public class Order : Entity<int>, IHasCreated, IHasUpdated, IHasDeleted
     {
         CustomerName = customerName;
         CustomerOrderNo = customerOrderNo;
-        AddDomainEvent(new GenerateOrderNoEvent(Id));
+        AddDomainEvent(new GenerateOrderNoEvent(Id)); // TODO: 依赖id的事件不应该使用自增, 后续需要调整
     }
 
     public string CustomerName { get; private set; }

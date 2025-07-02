@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.Fast.Domain", "Fly.Fast
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.Fast.Infrastructure", "Fly.Fast\Fly.Fast.Infrastructure\Fly.Fast.Infrastructure.csproj", "{62D805CC-DDC5-40E2-A64B-A1EE9EB29028}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.Fast.Persistence.Contracts", "Fly.Fast\Fly.Fast.Persistence.Contracts\Fly.Fast.Persistence.Contracts.csproj", "{9F82B446-9F91-46C8-B7EB-1D6003BA8E97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.Fast.Persistence.EntityFrameworkCore", "Fly.Fast\Fly.Fast.Persistence.EntityFrameworkCore\Fly.Fast.Persistence.EntityFrameworkCore.csproj", "{ACE8F286-6D87-496C-A695-AE338A1BE112}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,10 +59,20 @@ Global
 		{62D805CC-DDC5-40E2-A64B-A1EE9EB29028}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62D805CC-DDC5-40E2-A64B-A1EE9EB29028}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62D805CC-DDC5-40E2-A64B-A1EE9EB29028}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F82B446-9F91-46C8-B7EB-1D6003BA8E97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F82B446-9F91-46C8-B7EB-1D6003BA8E97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F82B446-9F91-46C8-B7EB-1D6003BA8E97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F82B446-9F91-46C8-B7EB-1D6003BA8E97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACE8F286-6D87-496C-A695-AE338A1BE112}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE8F286-6D87-496C-A695-AE338A1BE112}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE8F286-6D87-496C-A695-AE338A1BE112}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE8F286-6D87-496C-A695-AE338A1BE112}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{97E6B680-92A3-4208-9542-9B357F8C81AE} = {8B456C07-10F9-4499-9778-5CF360A82F60}
 		{D4DF7A01-8821-48EA-AE37-996A590F7412} = {8B456C07-10F9-4499-9778-5CF360A82F60}
 		{62D805CC-DDC5-40E2-A64B-A1EE9EB29028} = {8B456C07-10F9-4499-9778-5CF360A82F60}
+		{9F82B446-9F91-46C8-B7EB-1D6003BA8E97} = {8B456C07-10F9-4499-9778-5CF360A82F60}
+		{ACE8F286-6D87-496C-A695-AE338A1BE112} = {8B456C07-10F9-4499-9778-5CF360A82F60}
 	EndGlobalSection
 EndGlobal
