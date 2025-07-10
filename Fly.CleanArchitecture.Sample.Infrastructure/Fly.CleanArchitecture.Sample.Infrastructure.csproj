@@ -17,7 +17,7 @@
     <ItemGroup>
         <ProjectReference Include="..\Fly.CleanArchitecture.Sample.Application\Fly.CleanArchitecture.Sample.Application.csproj"/>
         <ProjectReference Include="..\Fly.Fast\Fly.Fast.Infrastructure\Fly.Fast.Infrastructure.csproj"/>
-        <ProjectReference Include="..\Fly.Fast\Fly.Fast.Persistence\Fly.Fast.Persistence.csproj" />
+        <ProjectReference Include="..\Fly.Fast\Fly.Fast.Persistence\Fly.Fast.Persistence.csproj"/>
     </ItemGroup>
 
 </Project>
