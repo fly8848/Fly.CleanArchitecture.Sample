@@ -2,7 +2,7 @@
 using Fly.CleanArchitecture.Sample.Infrastructure.Persistence;
 using Fly.CleanArchitecture.Sample.Infrastructure.Persistence.Repositories;
 using Fly.Fast.Domain;
-using Fly.Fast.Persistence.EntityFrameworkCore;
+using Fly.Fast.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

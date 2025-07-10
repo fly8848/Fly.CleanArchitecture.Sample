@@ -23,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.Fast.Infrastructure", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.Fast.Persistence.Contracts", "Fly.Fast\Fly.Fast.Persistence.Contracts\Fly.Fast.Persistence.Contracts.csproj", "{9F82B446-9F91-46C8-B7EB-1D6003BA8E97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.Fast.Persistence.EntityFrameworkCore", "Fly.Fast\Fly.Fast.Persistence.EntityFrameworkCore\Fly.Fast.Persistence.EntityFrameworkCore.csproj", "{ACE8F286-6D87-496C-A695-AE338A1BE112}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fly.Fast.Persistence", "Fly.Fast\Fly.Fast.Persistence\Fly.Fast.Persistence.csproj", "{ACE8F286-6D87-496C-A695-AE338A1BE112}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
